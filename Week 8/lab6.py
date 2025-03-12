@@ -38,6 +38,7 @@ def molecule_formula(compound_formula):
     """
     ## To Do: Complete the function
     splitted = re.split(r'(\d+)', compound_formula)
+    
     result = {}
     for i in range(1 ,len(splitted), 2):
         if splitted[i-1] not in result:
@@ -147,8 +148,6 @@ def identify_unbalanced_atoms(reactant_atoms, product_atoms):
             result.add(key)
     
     return result if len(result) > 0 else set()
-
-
 
 ###############################################
 # PART 4 - Check Chemical Equation Balance    #
